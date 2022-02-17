@@ -20,6 +20,18 @@ def songread():
     list = json.load(file)
     return 200
 
+@app.route("/backpacking_photos")
+def bpphotos():
+    url_for('static', filename='playlist_store.js')
+    url_for('static', filename='playlist.js')
+    url_for('static', filename='style.css')
+    url_for('static', filename='levypedia.css')
+    url_for('static', filename='Profile-Picture.jpeg')
+    url_for('static', filename='/slideshow/Slideshow.css')
+    url_for('static', filename='/slideshow/slideshow.js')
+
+    return render_template('backpacking_photos.html')
+
 @app.route("/")
 def home():
     url_for('static', filename='playlist_store.js')
@@ -27,4 +39,6 @@ def home():
     url_for('static', filename='style.css')
     url_for('static', filename='levypedia.css')
     url_for('static', filename='Profile-Picture.jpeg')
+    url_for('static', filename='HawaiiVid.MP4')
+
     return render_template('Home.html')
